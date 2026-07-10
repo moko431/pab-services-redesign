@@ -155,6 +155,7 @@ select.f{appearance:none;background:var(--bg) url("data:image/svg+xml,%3Csvg xml
 .chips{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;max-width:900px;margin:0 auto 38px}
 .chip{background:var(--bg);border:1px solid var(--line);color:var(--ink);font-size:14.5px;font-weight:600;padding:11px 18px;border-radius:100px;transition:.16s}
 .chip:hover{background:var(--tint);border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+.area-cities{max-width:820px;margin:0 auto;text-align:center;font-size:16px;font-weight:600;color:var(--ink);line-height:2.1;letter-spacing:.01em}
 
 /* PRICING */
 .price{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center;background:var(--ink);color:#fff;border-radius:8px;padding:52px}
@@ -381,23 +382,6 @@ select.f{appearance:none;background:var(--bg) url("data:image/svg+xml,%3Csvg xml
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="pad" id="faq" style="background:var(--bg)">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">(Good to know)</span>
-      <h2 class="big-h">Frequently asked questions</h2>
-    </div>
-    <div class="faq reveal">
-      <details class="qa" open><summary>How is the price decided?<span class="pl">+</span></summary><div class="a">The price depends on the issue, urgency, distance, required parts and working time. The amount is communicated before intervention, and no work starts without your approval.</div></details>
-      <details class="qa"><summary>Do you handle urgent repairs at night or on weekends?<span class="pl">+</span></summary><div class="a">Yes. An urgent request is possible at night, weekends and holidays depending on the situation.</div></details>
-      <details class="qa"><summary>Which areas do you cover?<span class="pl">+</span></summary><div class="a">Service is possible across Belgium, in Brussels, Wallonia and Flanders. If your city is not listed, ask us and we will confirm availability.</div></details>
-      <details class="qa"><summary>How can I contact you?<span class="pl">+</span></summary><div class="a">By quote request, phone call or WhatsApp. You can send photos by WhatsApp to speed up the analysis.</div></details>
-      <details class="qa"><summary>How can I pay?<span class="pl">+</span></summary><div class="a">Payment is possible by cash, bank transfer or card, once the work is agreed and done.</div></details>
-    </div>
-  </div>
-</section>
-
 <!-- CTA -->
 <section class="pad">
   <div class="wrap">
@@ -454,7 +438,7 @@ select.f{appearance:none;background:var(--bg) url("data:image/svg+xml,%3Csvg xml
   [].slice.call(document.querySelectorAll('.reveal')).forEach(function(el){io.observe(el);});
 })();
 function pabTab(btn,t){[].slice.call(document.querySelectorAll('.qtabs button')).forEach(function(b){b.classList.remove('on')});btn.classList.add('on');}
-var HELP={every:{img:'https://pab-services.be/assets/plumbing.webp',txt:'Leaks, taps, toilets, drains, connections, showers, washbasins, sinks and sanitary repairs. Clean, reliable plumbing for your home, with the price communicated before we start.'},urgent:{img:'https://pab-services.be/assets/urgent.webp',txt:'Heating maintenance, radiators, bleeding and diagnosis, plus urgent repairs at night, on weekends and holidays depending on the situation. Send photos by WhatsApp to speed up the analysis.'}};
+var HELP={every:{img:'https://pab-services.be/assets/plumbing.webp',txt:'Leaks, taps, toilets, drains, connections, showers, washbasins, sinks and sanitary repairs. Clean, reliable plumbing for your home, with the price communicated before we start.'},heating:{img:'https://pab-services.be/assets/heating.webp',txt:'Heating maintenance, radiators, bleeding, diagnosis and heat problems. Water heater and boiler issues, from diagnosis to replacement or an adapted intervention, plus small sanitary installations.'},urgent:{img:'https://pab-services.be/assets/urgent.webp',txt:'Urgent requests at night, on weekends and holidays depending on the situation. Unblocking of toilets, sinks, showers, washbasins, siphons and blocked drains. Send photos by WhatsApp to speed up the analysis.'}};
 function pabHelp(btn,k){[].slice.call(document.querySelectorAll('.toggle-h button')).forEach(function(b){b.classList.remove('on')});btn.classList.add('on');document.getElementById('helpBody').textContent=HELP[k].txt;document.getElementById('helpImg').src=HELP[k].img;}
 function pabQuote(e){e.preventDefault();window.location.href='https://wa.me/32451066515';return false;}
 </script>

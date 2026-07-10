@@ -127,15 +127,17 @@ select.f{appearance:none;background:var(--bg) url("data:image/svg+xml,%3Csvg xml
 .svc h3{font-size:21px;margin-bottom:9px;letter-spacing:-.02em}
 .svc p{font-size:14.5px}
 
-/* STEPS (photo tiles) */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.stp .head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
-.stp .n{font-size:15px;font-weight:700;color:var(--blue)}
-.stp h3{font-size:22px;letter-spacing:-.02em}
-.stp .tile{height:210px;border-radius:6px;overflow:hidden;margin-bottom:16px}
+/* STEPS (numbered timeline + photo tiles, Plumbee-style) */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.stp .tl{display:flex;align-items:center;margin-bottom:20px}
+.stp .dot{width:46px;height:46px;border-radius:50%;background:var(--bg);color:var(--ink);display:grid;place-items:center;font-weight:700;font-size:18px;flex:none}
+.stp .ln{flex:1;height:1px;background:var(--line);margin-left:8px}
+.stp h3{font-size:24px;letter-spacing:-.025em;margin-bottom:8px}
+.stp .sub{font-size:15px;color:var(--body);margin-bottom:22px;min-height:46px}
+.stp .tile{height:300px;border-radius:6px;overflow:hidden}
 .stp .tile img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.stp:hover .tile img{transform:scale(1.05)}
-.stp p{font-size:15px}
+.stp:hover .tile img{transform:scale(1.04)}
+@media(max-width:600px){.stp .ln{display:none}.stp .sub{min-height:0}}
 
 /* PROMISE (grey) */
 .promise{background:var(--bg)}

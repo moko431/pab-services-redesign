@@ -237,22 +237,20 @@ select.f{appearance:none;background:var(--bg) url("data:image/svg+xml,%3Csvg xml
       <span class="brand-img"><img src="https://pab-services.be/assets/logo-pab-services-horizontal.webp" alt="PAB Services"></span>
     </a>
     <nav class="nav-links">
-      <a href="#services">Services</a>
       <a href="#help">How we help</a>
+      <a href="#process">Process</a>
       <a href="#area">Service area</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
+      <a href="#quote">Contact</a>
     </nav>
     <div class="nav-cta"><a class="btn btn-white" href="#quote">Request a quote</a></div>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 <div class="mobile-menu" id="mm">
-  <a href="#services">Services</a>
   <a href="#help">How we help</a>
+  <a href="#process">Process</a>
   <a href="#area">Service area</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#faq">FAQ</a>
+  <a href="#quote">Contact</a>
   <a class="btn btn-primary" href="#quote">Request a quote</a>
 </div>
 
@@ -308,7 +306,7 @@ select.f{appearance:none;background:var(--bg) url("data:image/svg+xml,%3Csvg xml
   </div>
 </section>
 
-<!-- HOW WE CAN HELP (two-tone toggle) -->
+<!-- HOW WE CAN HELP (two-tone toggle, carries all services) -->
 <section class="pad help" id="help">
   <div class="wrap split">
     <div class="help-img reveal"><img id="helpImg" src="https://pab-services.be/assets/plumbing.webp" alt="PAB Services plumber at work"></div>
@@ -316,35 +314,17 @@ select.f{appearance:none;background:var(--bg) url("data:image/svg+xml,%3Csvg xml
       <span class="eyebrow">(How we can help)</span>
       <div class="toggle-h">
         <button class="on" data-h="every" onclick="pabHelp(this,'every')">Everyday plumbing<span class="u"></span></button>
-        <button data-h="urgent" onclick="pabHelp(this,'urgent')">Urgent &amp; heating<span class="u"></span></button>
+        <button data-h="heating" onclick="pabHelp(this,'heating')">Heating &amp; boiler<span class="u"></span></button>
+        <button data-h="urgent" onclick="pabHelp(this,'urgent')">Urgent &amp; unblocking<span class="u"></span></button>
       </div>
       <p class="help-body" id="helpBody">Leaks, taps, toilets, drains, connections, showers, washbasins, sinks and sanitary repairs. Clean, reliable plumbing for your home, with the price communicated before we start.</p>
-      <a class="btn btn-primary" href="#services">View all services</a>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="pad" id="services" style="border-top:1px solid var(--line-2)">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">(What we do)</span>
-      <h2 class="big-h">Plumbing and heating, handled properly</h2>
-      <p>From a dripping tap to an urgent night call. One team for your plumbing, heating and unblocking work across Belgium.</p>
-    </div>
-    <div class="grid-3">
-      <article class="svc reveal"><div class="ph"><img src="https://pab-services.be/assets/plumbing.webp" alt="General plumbing"><span class="tag">Plumbing</span></div><div class="bd"><h3>General plumbing</h3><p>Leaks, taps, toilets, drains, connections, showers, washbasins, sinks and sanitary repairs.</p></div></article>
-      <article class="svc reveal"><div class="ph"><img src="https://pab-services.be/assets/heating.webp" alt="Heating and maintenance"><span class="tag">Heating</span></div><div class="bd"><h3>Heating &amp; maintenance</h3><p>Heating maintenance, radiators, bleeding, diagnosis, heat problems and installation check.</p></div></article>
-      <article class="svc urgent reveal"><div class="ph"><img src="https://pab-services.be/assets/urgent.webp" alt="Urgent repairs"><span class="tag">Urgent 24/7</span></div><div class="bd"><h3>Urgent repairs</h3><p>Urgent request possible at night, weekends and holidays depending on the situation.</p></div></article>
-      <article class="svc reveal"><div class="ph"><img src="https://pab-services.be/assets/valves.webp" alt="Unblocking"><span class="tag">Unblocking</span></div><div class="bd"><h3>Unblocking</h3><p>Toilets, sinks, showers, washbasins, siphons and blocked drains depending on the issue found.</p></div></article>
-      <article class="svc reveal"><div class="ph"><img src="https://pab-services.be/assets/boiler.webp" alt="Water heater and boiler"><span class="tag">Boiler</span></div><div class="bd"><h3>Water heater / boiler</h3><p>Hot water issue, diagnosis, replacement or adapted intervention depending on the installation.</p></div></article>
-      <article class="svc reveal"><div class="ph"><img src="https://pab-services.be/assets/tools.webp" alt="Small installations"><span class="tag">Installation</span></div><div class="bd"><h3>Small installations</h3><p>Sanitary equipment replacement, connections and small bathroom improvements.</p></div></article>
+      <a class="btn btn-primary" href="#quote">Request a quote</a>
     </div>
   </div>
 </section>
 
 <!-- STEPS -->
-<section class="pad promise">
+<section class="pad promise" id="process" style="border-top:1px solid var(--line-2)">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">(How a request works)</span>
@@ -376,37 +356,16 @@ select.f{appearance:none;background:var(--bg) url("data:image/svg+xml,%3Csvg xml
   </div>
 </section>
 
-<!-- SERVICE AREA -->
-<section class="pad area promise" id="area">
+<!-- SERVICE AREA (Plumbee-style: centered statement + subtle city line + centered CTA) -->
+<section class="pad area" id="area">
   <div class="wrap">
-    <div class="sec-head center reveal" style="margin-bottom:36px">
+    <div class="sec-head center reveal" style="margin-bottom:30px">
       <span class="eyebrow">(Service area)</span>
-      <h2 class="big-h">Mobile across Belgium</h2>
-      <p style="margin-left:auto;margin-right:auto">Service is possible in Brussels, Wallonia and Flanders. A selection of the cities we cover:</p>
+      <h2 class="big-h">Same-day plumbing across Belgium</h2>
+      <p style="margin-left:auto;margin-right:auto">Mobile service in Brussels, Wallonia and Flanders. The price is always communicated before we start, and payment is by cash, bank transfer or card.</p>
     </div>
-    <div class="chips reveal">
-      <span class="chip">Brussels</span><span class="chip">Antwerp</span><span class="chip">Ghent</span><span class="chip">Charleroi</span><span class="chip">Liège</span><span class="chip">Namur</span><span class="chip">Bruges</span><span class="chip">Leuven</span><span class="chip">Mons</span><span class="chip">Mechelen</span><span class="chip">Aalst</span><span class="chip">Hasselt</span><span class="chip">Schaerbeek</span><span class="chip">Anderlecht</span><span class="chip">Ixelles</span><span class="chip">Uccle</span><span class="chip">Sint-Niklaas</span><span class="chip">La Louvière</span><span class="chip">Molenbeek</span><span class="chip">Beveren</span>
-    </div>
-    <div class="reveal" style="text-align:center"><a class="btn btn-primary" href="#quote">Check availability in your city</a></div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pad" id="pricing">
-  <div class="wrap">
-    <div class="price reveal">
-      <div>
-        <span class="eyebrow">(Quote-based pricing)</span>
-        <h2 class="big-h">You know the price before we start</h2>
-        <p>The price depends on the issue, urgency, distance, required parts and working time. The amount is communicated before intervention, and no work starts without your approval.</p>
-        <a class="btn btn-white" href="#quote">Request a quote</a>
-      </div>
-      <div class="pay">
-        <div class="p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>Cash</div>
-        <div class="p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V10M19 21V10M12 3L3 8h18l-9-5z"/></svg>Bank transfer</div>
-        <div class="p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Card payment</div>
-      </div>
-    </div>
+    <p class="area-cities reveal">Brussels &nbsp;·&nbsp; Antwerp &nbsp;·&nbsp; Ghent &nbsp;·&nbsp; Charleroi &nbsp;·&nbsp; Liège &nbsp;·&nbsp; Namur &nbsp;·&nbsp; Bruges &nbsp;·&nbsp; Leuven &nbsp;·&nbsp; Mons &nbsp;·&nbsp; Mechelen &nbsp;·&nbsp; Aalst &nbsp;·&nbsp; Hasselt &nbsp;·&nbsp; Schaerbeek &nbsp;·&nbsp; Anderlecht &nbsp;·&nbsp; Ixelles &nbsp;·&nbsp; Uccle &nbsp;·&nbsp; Sint-Niklaas &nbsp;·&nbsp; La Louvière &nbsp;·&nbsp; Molenbeek &nbsp;·&nbsp; Beveren</p>
+    <div class="reveal" style="text-align:center;margin-top:38px"><a class="btn btn-primary" href="#quote">Set your quote</a></div>
   </div>
 </section>
 
